@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-
+<h1>Lista zadań</h1>
+<h2>Cześć <span id="name"></span>, twoje zadania na dziś:</h2>
     <script>
         //window.localStorage.setItem('name', 'Sara');
         if(window.localStorage.getItem('name') === null) {
            let name = window.prompt("Podaj imię: ");
             window.localStorage.setItem('name', name);
         }
+        document.getElementById('name').innerHTML = window.localStorage.getItem('name');
     </script>
     
 </body>
