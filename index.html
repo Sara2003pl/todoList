@@ -9,7 +9,11 @@
 <body>
 
     <script>
-        window.localStorage.setItem('name', 'Sara');
+        //window.localStorage.setItem('name', 'Sara');
+        if(window.localStorage.getItem('name') === null) {
+           let name = window.prompt("Podaj imię: ");
+            window.localStorage.setItem('name', name);
+        }
     </script>
     
 </body>
